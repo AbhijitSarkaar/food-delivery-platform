@@ -11,6 +11,7 @@ app.use(express.json());
 connectDB();
 
 // routes
+app.use('/images', express.static('uploads'));
 app.use('/api/food', foodRouter);
 
 app.listen(4000);
